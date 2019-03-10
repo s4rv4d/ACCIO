@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		400056F42235167300769C7A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400056F32235167300769C7A /* TextField.swift */; };
+		4060E5E422355E1900250DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4060E5E322355E1900250DC6 /* SignUpViewController.swift */; };
 		40AA7E422234E3660036A0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AA7E412234E3660036A0D1 /* AppDelegate.swift */; };
 		40AA7E472234E3660036A0D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AA7E452234E3660036A0D1 /* Main.storyboard */; };
 		40AA7E492234E3670036A0D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40AA7E482234E3670036A0D1 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		400056F32235167300769C7A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		4060E5E322355E1900250DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		40AA7E3E2234E3660036A0D1 /* ACCIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACCIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AA7E412234E3660036A0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40AA7E462234E3660036A0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				40AA7E572234E54E0036A0D1 /* LoginViewController.swift */,
+				4060E5E322355E1900250DC6 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				40AA7E422234E3660036A0D1 /* AppDelegate.swift in Sources */,
 				40AA7E9A2234F7E50036A0D1 /* Helper+Extensions.swift in Sources */,
 				400056F42235167300769C7A /* TextField.swift in Sources */,
+				4060E5E422355E1900250DC6 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: TextField!
     //LOGIN Button
     @IBOutlet weak var loginButtonOutlet: UIButton!
+    //other stuff
+    @IBOutlet weak var forgotPassButton: UIButton!
+    @IBOutlet weak var signUpViewOutlet: UIImageView!
+    
     
     
     override func viewDidLoad() {
@@ -30,6 +34,8 @@ class LoginViewController: UIViewController {
         textfieldDelegateSetup()
         textfieldViewSetup()
         loginButtonSetup()
+        observeNotification()
+        setupGestureRecognisers()
     }
     
     //MARK: - Functions
@@ -42,9 +48,29 @@ class LoginViewController: UIViewController {
         loginButtonOutlet.layer.cornerRadius = 8
     }
     
+    func setupGestureRecognisers(){
+        //tap gesture for sign up image view
+        let signUpTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.signUpViewTapped))
+        signUpViewOutlet.isUserInteractionEnabled = true
+        signUpViewOutlet.addGestureRecognizer(signUpTapGesture)
+    }
+    
     //MARK: - IBActions
     @IBAction func loginButtonTapped(_ sender: UIButton) {
     }
+    
+    @IBAction func forgotPassTapped(_ sender: UIButton) {
+    }
+    
+    //MARK: - Tap gesture functions
+    @objc func signUpViewTapped(){
+        print("sign up view tapped")
+        guard let signUpVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else{
+            fatalError("couldnt initialize storyboard")
+        }
+        self.present(signUpVC, animated: true, completion: nil)
+    }
+    
     
 }
 
@@ -88,8 +114,6 @@ extension LoginViewController: UITextFieldDelegate{
         passwordTextfield.layer.masksToBounds = false
         passwordTextfield.defaultTextAttributes.updateValue(2.0, forKey: NSAttributedString.Key.kern)
         
-        
-        
         //corner radius for all view
         loginTextFieldView.backgroundColor = UIColor.init(238.0, 238.0, 238.0, 1.0)
         loginTextFieldView.layer.cornerRadius = 8
@@ -115,8 +139,6 @@ extension LoginViewController: UITextFieldDelegate{
             //
             usernameTextfield.attributedPlaceholder = NSAttributedString(string: "", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
             passwordTextfield.attributedPlaceholder = NSAttributedString(string: "P A S S W O R D", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
-            
-            
             //animation
             UIView.animate(withDuration: 0.4) {
                 self.loginTextFieldView.backgroundColor = UIColor.init(254, 130, 80, 1.0)
@@ -144,4 +166,81 @@ extension LoginViewController: UITextFieldDelegate{
             }
         }
     }
+    
+    //MARK: - Textfield notification properties
+    func observeNotification(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardShow(){
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.frame = CGRect(x: 0, y: -170, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+        
+    }
+    @objc func keyboardWillHide(){
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTextfield{
+            usernameTextfield.resignFirstResponder()
+            passwordTextfield.becomeFirstResponder()
+            loginTextFieldView.backgroundColor = UIColor.init(238.0, 238.0, 238.0, 1.0)
+            if usernameTextfield.text == ""{
+                usernameTextfield.attributedPlaceholder = NSAttributedString(string: "U S E R N A M E", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
+                self.usernameTextfield.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+            }
+        }else{
+            passwordTextFieldView.backgroundColor = UIColor.init(238.0, 238.0, 238.0, 1.0)
+            if passwordTextfield.text == ""{
+                passwordTextfield.attributedPlaceholder = NSAttributedString(string: "P A S S W O R D", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
+                self.passwordTextfield.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+            }
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+        loginTextFieldView.backgroundColor = UIColor.init(238.0, 238.0, 238.0, 1.0)
+        self.usernameTextfield.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        passwordTextFieldView.backgroundColor = UIColor.init(238.0, 238.0, 238.0, 1.0)
+        self.passwordTextfield.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        
+        if usernameTextfield.text == ""{
+            print("here 1")
+            usernameTextfield.attributedPlaceholder = NSAttributedString(string: "U S E R N A M E", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
+        }
+        if passwordTextfield.text == ""{
+            print("herer")
+            passwordTextfield.attributedPlaceholder = NSAttributedString(string: "P A S S W O R D", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
+        }
+    }
+    
+    func clearFields(){
+        self.usernameTextfield.text = ""
+        self.passwordTextfield.text = ""
+        
+        if usernameTextfield.text == ""{
+            loginTextFieldView.backgroundColor = UIColor.init(238.0, 238.0, 238.0, 1.0)
+            usernameTextfield.attributedPlaceholder = NSAttributedString(string: "U S E R N A M E", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
+            self.usernameTextfield.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        }
+        
+        if passwordTextfield.text == ""{
+            passwordTextFieldView.backgroundColor = UIColor.init(238.0, 238.0, 238.0, 1.0)
+            passwordTextfield.attributedPlaceholder = NSAttributedString(string: "P A S S W O R D", attributes: [NSAttributedString.Key.foregroundColor:UIColor(51, 1, 54, 0.4)])
+            self.passwordTextfield.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+        }
+
+    }
+
 }

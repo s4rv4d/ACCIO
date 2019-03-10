@@ -94,6 +94,13 @@
                                 <rect key="frame" x="242" y="644" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlH-tA-h3t">
+                                <rect key="frame" x="50" y="706" width="167" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.0039215686269999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2Y-au-Pwm">
                                 <rect key="frame" x="32" y="438" width="95" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,16 +108,25 @@
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPassTapped:" destination="jun-g0-W9m" eventType="touchUpInside" id="8wz-rT-upO"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sign" translatesAutoresizingMaskIntoConstraints="NO" id="5S8-1P-9CW">
+                                <rect key="frame" x="221" y="706" width="96" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ri2-OQ-YAo"/>
                     </view>
                     <connections>
+                        <outlet property="forgotPassButton" destination="f2Y-au-Pwm" id="8GK-iN-imS"/>
                         <outlet property="loginButtonOutlet" destination="NAu-6k-AMl" id="IZI-wx-iAR"/>
                         <outlet property="loginTextFieldView" destination="dgT-cN-n4O" id="SJp-rK-l5d"/>
                         <outlet property="passwordTextFieldView" destination="60B-dt-FRK" id="FNX-UG-o41"/>
                         <outlet property="passwordTextfield" destination="S9t-9L-8H4" id="AAL-U2-x6i"/>
+                        <outlet property="signUpViewOutlet" destination="5S8-1P-9CW" id="vkv-a6-MsI"/>
                         <outlet property="usernameTextfield" destination="VMo-Vh-X19" id="BiV-29-tb7"/>
                     </connections>
                 </viewController>
@@ -118,11 +134,131 @@
             </objects>
             <point key="canvasLocation" x="248.80000000000001" y="101.97044334975369"/>
         </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="2KQ-ih-Iw6">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" id="Rc4-DC-jJi" customClass="SignUpViewController" customModule="ACCIO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UWv-L4-MPD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ACCIO" translatesAutoresizingMaskIntoConstraints="NO" id="oVq-yA-rYf">
+                                <rect key="frame" x="16" y="140" width="343" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wy4-KR-DIl">
+                                <rect key="frame" x="30" y="274" width="315" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEA-VJ-GUy" customClass="TextField" customModule="ACCIO" customModuleProvider="target">
+                                        <rect key="frame" x="9" y="0.0" width="306" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80a-GP-wmp">
+                                <rect key="frame" x="30" y="353" width="315" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-5A-UIO" customClass="TextField" customModule="ACCIO" customModuleProvider="target">
+                                        <rect key="frame" x="9" y="0.0" width="306" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGM-Rj-4UV">
+                                <rect key="frame" x="30" y="511" width="315" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Black" family="SF Pro Display" pointSize="21"/>
+                                <state key="normal" title="S I G N U P">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.0039215686269999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="Rc4-DC-jJi" eventType="touchUpInside" id="2mO-jF-sXV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or  Sign Up with " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zum-TT-pzD">
+                                <rect key="frame" x="30" y="614" width="86" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="13"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="6vP-3z-nu5">
+                                <rect key="frame" x="90" y="644" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fb" translatesAutoresizingMaskIntoConstraints="NO" id="AT5-Rw-5Wt">
+                                <rect key="frame" x="166" y="644" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="uNQ-zV-dWT">
+                                <rect key="frame" x="242" y="644" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-68-5v5">
+                                <rect key="frame" x="37" y="706" width="180" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.0039215686269999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login now" translatesAutoresizingMaskIntoConstraints="NO" id="vjO-E8-Gcf">
+                                <rect key="frame" x="221" y="706" width="96" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0AQ-x7-UGw">
+                                <rect key="frame" x="30" y="432" width="315" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CuT-6f-8Xe" customClass="TextField" customModule="ACCIO" customModuleProvider="target">
+                                        <rect key="frame" x="9" y="0.0" width="306" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ndW-tn-is5"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="BEA-VJ-GUy" id="PGV-84-848"/>
+                        <outlet property="emailTextView" destination="Wy4-KR-DIl" id="jVB-k6-DRT"/>
+                        <outlet property="loginViewOutlet" destination="vjO-E8-Gcf" id="ckf-dy-Yq3"/>
+                        <outlet property="passwordTextView" destination="0AQ-x7-UGw" id="h35-JB-PLK"/>
+                        <outlet property="passwordTextfield" destination="CuT-6f-8Xe" id="UGv-XF-hFA"/>
+                        <outlet property="signUpButtonOutlet" destination="YGM-Rj-4UV" id="cTc-Pa-ral"/>
+                        <outlet property="usernameTextView" destination="80a-GP-wmp" id="drH-qh-IEG"/>
+                        <outlet property="usernameTextfield" destination="N6M-5A-UIO" id="9tn-aF-2d4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4P1-9J-uqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.60000000000002" y="101.97044334975369"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ACCIO" width="339" height="116"/>
         <image name="fb" width="54" height="54"/>
         <image name="google" width="54" height="54"/>
+        <image name="login now" width="88" height="20"/>
+        <image name="sign" width="105" height="20"/>
         <image name="twitter" width="54" height="54"/>
     </resources>
 </document>
