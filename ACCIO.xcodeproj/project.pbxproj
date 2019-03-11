@@ -3,11 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		400056F42235167300769C7A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400056F32235167300769C7A /* TextField.swift */; };
+		4023D6D82235877A0004FFB1 /* Private_variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6D72235877A0004FFB1 /* Private_variables.swift */; };
+		4023D6DC22358E050004FFB1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6DB22358E050004FFB1 /* HomeViewController.swift */; };
+		4023D6DE22358E7F0004FFB1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6DD22358E7F0004FFB1 /* ProfileViewController.swift */; };
+		4023D6E022358E8B0004FFB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6DF22358E8B0004FFB1 /* SettingsViewController.swift */; };
+		4023D6E222358ECF0004FFB1 /* MySubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6E122358ECF0004FFB1 /* MySubscriptionsViewController.swift */; };
+		4023D6E422358EDB0004FFB1 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6E322358EDB0004FFB1 /* MyAccountViewController.swift */; };
+		4023D6E82235AF5B0004FFB1 /* MySubscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6E72235AF5B0004FFB1 /* MySubscriptionTableViewCell.swift */; };
+		4023D6EA2235B0410004FFB1 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6E92235B0410004FFB1 /* Subscription.swift */; };
+		4023D6EC2235B7A20004FFB1 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6EB2235B7A20004FFB1 /* Account.swift */; };
+		4023D6EE2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6ED2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift */; };
+		4023D6F32236143E0004FFB1 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6F22236143E0004FFB1 /* CreateAccountViewController.swift */; };
+		4023D6F522363EE10004FFB1 /* AddCCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6F422363EE10004FFB1 /* AddCCViewController.swift */; };
 		4060E5E422355E1900250DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4060E5E322355E1900250DC6 /* SignUpViewController.swift */; };
 		40AA7E422234E3660036A0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AA7E412234E3660036A0D1 /* AppDelegate.swift */; };
 		40AA7E472234E3660036A0D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AA7E452234E3660036A0D1 /* Main.storyboard */; };
@@ -45,10 +57,24 @@
 		40AA7E972234EDC60036A0D1 /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 40AA7E792234EDC50036A0D1 /* SF-Pro-Display-BlackItalic.otf */; };
 		40AA7E982234EDC60036A0D1 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 40AA7E7A2234EDC50036A0D1 /* SF-Pro-Text-MediumItalic.otf */; };
 		40AA7E9A2234F7E50036A0D1 /* Helper+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AA7E992234F7E50036A0D1 /* Helper+Extensions.swift */; };
+		70026A04120E0AAF885578B0 /* Pods_ACCIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A352D087C56FC56215ACCA /* Pods_ACCIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38371B5C5C0C211715A17A91 /* Pods-ACCIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACCIO.debug.xcconfig"; path = "Target Support Files/Pods-ACCIO/Pods-ACCIO.debug.xcconfig"; sourceTree = "<group>"; };
 		400056F32235167300769C7A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		4023D6D72235877A0004FFB1 /* Private_variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Private_variables.swift; sourceTree = "<group>"; };
+		4023D6DB22358E050004FFB1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4023D6DD22358E7F0004FFB1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4023D6DF22358E8B0004FFB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4023D6E122358ECF0004FFB1 /* MySubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubscriptionsViewController.swift; sourceTree = "<group>"; };
+		4023D6E322358EDB0004FFB1 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		4023D6E72235AF5B0004FFB1 /* MySubscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubscriptionTableViewCell.swift; sourceTree = "<group>"; };
+		4023D6E92235B0410004FFB1 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		4023D6EB2235B7A20004FFB1 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		4023D6ED2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountCollectionViewCell.swift; sourceTree = "<group>"; };
+		4023D6F22236143E0004FFB1 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		4023D6F422363EE10004FFB1 /* AddCCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCCViewController.swift; sourceTree = "<group>"; };
 		4060E5E322355E1900250DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		40AA7E3E2234E3660036A0D1 /* ACCIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACCIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AA7E412234E3660036A0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +114,8 @@
 		40AA7E792234EDC50036A0D1 /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
 		40AA7E7A2234EDC50036A0D1 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
 		40AA7E992234F7E50036A0D1 /* Helper+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+Extensions.swift"; sourceTree = "<group>"; };
+		A4A352D087C56FC56215ACCA /* Pods_ACCIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ACCIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD02D43BC79DBF76EE8B5C3 /* Pods-ACCIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACCIO.release.xcconfig"; path = "Target Support Files/Pods-ACCIO/Pods-ACCIO.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70026A04120E0AAF885578B0 /* Pods_ACCIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,11 +138,53 @@
 			path = Class;
 			sourceTree = "<group>";
 		};
+		4023D6D922358DCC0004FFB1 /* Reg module */ = {
+			isa = PBXGroup;
+			children = (
+				40AA7E572234E54E0036A0D1 /* LoginViewController.swift */,
+				4060E5E322355E1900250DC6 /* SignUpViewController.swift */,
+			);
+			path = "Reg module";
+			sourceTree = "<group>";
+		};
+		4023D6DA22358DE00004FFB1 /* Main module */ = {
+			isa = PBXGroup;
+			children = (
+				4023D6DB22358E050004FFB1 /* HomeViewController.swift */,
+				4023D6DD22358E7F0004FFB1 /* ProfileViewController.swift */,
+				4023D6DF22358E8B0004FFB1 /* SettingsViewController.swift */,
+				4023D6E522358EE00004FFB1 /* Home Module */,
+			);
+			path = "Main module";
+			sourceTree = "<group>";
+		};
+		4023D6E522358EE00004FFB1 /* Home Module */ = {
+			isa = PBXGroup;
+			children = (
+				4023D6E122358ECF0004FFB1 /* MySubscriptionsViewController.swift */,
+				4023D6E322358EDB0004FFB1 /* MyAccountViewController.swift */,
+				4023D6F22236143E0004FFB1 /* CreateAccountViewController.swift */,
+				4023D6F422363EE10004FFB1 /* AddCCViewController.swift */,
+			);
+			path = "Home Module";
+			sourceTree = "<group>";
+		};
+		4023D6E62235AEF10004FFB1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4023D6E72235AF5B0004FFB1 /* MySubscriptionTableViewCell.swift */,
+				4023D6ED2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		40AA7E352234E3660036A0D1 = {
 			isa = PBXGroup;
 			children = (
 				40AA7E402234E3660036A0D1 /* ACCIO */,
 				40AA7E3F2234E3660036A0D1 /* Products */,
+				6E30AFA7506AC3A0F720325B /* Pods */,
+				C2B96EEB1E134A6A1270E0C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +203,7 @@
 				40AA7E5B2234EDA80036A0D1 /* Fonts */,
 				40AA7E552234E4CC0036A0D1 /* Model */,
 				40AA7E542234E4C70036A0D1 /* Views */,
+				4023D6E62235AEF10004FFB1 /* Cells */,
 				40AA7E532234E4B30036A0D1 /* Controller */,
 				40AA7E562234E4EA0036A0D1 /* Services */,
 				40AA7E482234E3670036A0D1 /* Assets.xcassets */,
@@ -143,8 +215,8 @@
 		40AA7E532234E4B30036A0D1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				40AA7E572234E54E0036A0D1 /* LoginViewController.swift */,
-				4060E5E322355E1900250DC6 /* SignUpViewController.swift */,
+				4023D6DA22358DE00004FFB1 /* Main module */,
+				4023D6D922358DCC0004FFB1 /* Reg module */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +233,8 @@
 		40AA7E552234E4CC0036A0D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4023D6E92235B0410004FFB1 /* Subscription.swift */,
+				4023D6EB2235B7A20004FFB1 /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +244,7 @@
 			children = (
 				40AA7E412234E3660036A0D1 /* AppDelegate.swift */,
 				40AA7E992234F7E50036A0D1 /* Helper+Extensions.swift */,
+				4023D6D72235877A0004FFB1 /* Private_variables.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -219,6 +294,23 @@
 			path = "SF Pro";
 			sourceTree = "<group>";
 		};
+		6E30AFA7506AC3A0F720325B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38371B5C5C0C211715A17A91 /* Pods-ACCIO.debug.xcconfig */,
+				BDD02D43BC79DBF76EE8B5C3 /* Pods-ACCIO.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C2B96EEB1E134A6A1270E0C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4A352D087C56FC56215ACCA /* Pods_ACCIO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40AA7E502234E3670036A0D1 /* Build configuration list for PBXNativeTarget "ACCIO" */;
 			buildPhases = (
+				558B0B7D92BBE9DDC2C96568 /* [CP] Check Pods Manifest.lock */,
 				40AA7E3A2234E3660036A0D1 /* Sources */,
 				40AA7E3B2234E3660036A0D1 /* Frameworks */,
 				40AA7E3C2234E3660036A0D1 /* Resources */,
+				CB6BE3F61F7390585B12ECC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,11 +345,13 @@
 				TargetAttributes = {
 					40AA7E3D2234E3660036A0D1 = {
 						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = N4FDL334LZ;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 40AA7E392234E3660036A0D1 /* Build configuration list for PBXProject "ACCIO" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -315,16 +411,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		558B0B7D92BBE9DDC2C96568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ACCIO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6BE3F61F7390585B12ECC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ACCIO/Pods-ACCIO-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CreditCardForm/CreditCardForm.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardForm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ACCIO/Pods-ACCIO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40AA7E3A2234E3660036A0D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				40AA7E582234E54E0036A0D1 /* LoginViewController.swift in Sources */,
+				4023D6D82235877A0004FFB1 /* Private_variables.swift in Sources */,
 				40AA7E422234E3660036A0D1 /* AppDelegate.swift in Sources */,
 				40AA7E9A2234F7E50036A0D1 /* Helper+Extensions.swift in Sources */,
+				4023D6F32236143E0004FFB1 /* CreateAccountViewController.swift in Sources */,
 				400056F42235167300769C7A /* TextField.swift in Sources */,
+				4023D6E422358EDB0004FFB1 /* MyAccountViewController.swift in Sources */,
+				4023D6E82235AF5B0004FFB1 /* MySubscriptionTableViewCell.swift in Sources */,
+				4023D6EA2235B0410004FFB1 /* Subscription.swift in Sources */,
+				4023D6DC22358E050004FFB1 /* HomeViewController.swift in Sources */,
+				4023D6DE22358E7F0004FFB1 /* ProfileViewController.swift in Sources */,
 				4060E5E422355E1900250DC6 /* SignUpViewController.swift in Sources */,
+				4023D6E022358E8B0004FFB1 /* SettingsViewController.swift in Sources */,
+				4023D6EE2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift in Sources */,
+				4023D6F522363EE10004FFB1 /* AddCCViewController.swift in Sources */,
+				4023D6E222358ECF0004FFB1 /* MySubscriptionsViewController.swift in Sources */,
+				4023D6EC2235B7A20004FFB1 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,23 +619,21 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		40AA7E512234E3670036A0D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38371B5C5C0C211715A17A91 /* Pods-ACCIO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N4FDL334LZ;
 				INFOPLIST_FILE = ACCIO/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sarvad-Shetty.ACCIO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -486,15 +643,14 @@
 		};
 		40AA7E522234E3670036A0D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD02D43BC79DBF76EE8B5C3 /* Pods-ACCIO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N4FDL334LZ;
 				INFOPLIST_FILE = ACCIO/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sarvad-Shetty.ACCIO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

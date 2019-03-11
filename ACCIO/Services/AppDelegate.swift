@@ -16,7 +16,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UITabBar.appearance().barTintColor = UIColor.init(51, 1, 54, 1)
+        UITabBar.appearance().tintColor = UIColor.init(254, 130, 80, 1)
+        UITabBar.appearance().unselectedItemTintColor = UIColor.init(254, 130, 80, 1)
+        
+        //userdefaults part
+//        let userdef = UserDefaults.standard
+//        
+//        if userdef.object(forKey: KUSERFLAG) == nil{
+//            DispatchQueue.main.async {
+//                self.goToLogin()
+//            }
+//        }else{
+//            
+//        }
+        
         return true
+    }
+    
+    func goToLogin(){
+        //initialize a storyboard
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        //making root view controller
+        self.window?.rootViewController = mainView
+    }
+    
+    func goToMain(){
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
