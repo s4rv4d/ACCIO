@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
     
@@ -26,6 +27,9 @@ class SignUpViewController: UIViewController {
     //othrs
     @IBOutlet weak var loginViewOutlet: UIImageView!
     
+    //MARK: - Variables
+    var userUID:String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,24 @@ class SignUpViewController: UIViewController {
     
     //MARK: - IBAction
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
+        if usernameTextfield.text != "" && passwordTextfield.text != "" && emailTextField.text != ""{
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextfield.text!) { (user, error) in
+                if error != nil{
+                    let alert = UIAlertController(title: "Alert", message: "Error registering user", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }else{
+                    if let user = user{
+                        self.userUID = user.user.uid
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }
+        }else{
+            let alert = UIAlertController(title: "Alert", message: "Fill in all the fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Re-Enter", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     //MARK: - Functions

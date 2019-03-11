@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -23,6 +24,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var signUpViewOutlet: UIImageView!
     
+    //MARK: - Variables
+    var userUID:String?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
     override func viewDidLoad() {
@@ -55,8 +59,35 @@ class LoginViewController: UIViewController {
         signUpViewOutlet.addGestureRecognizer(signUpTapGesture)
     }
     
+    
+    func GoToApp(){
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tab") as! UITabBarController
+        self.appDelegate.window?.rootViewController = mainView
+    }
+    
     //MARK: - IBActions
     @IBAction func loginButtonTapped(_ sender: UIButton) {
+        if usernameTextfield.text != "" && passwordTextfield.text != ""{
+            //login
+            Auth.auth().signIn(withEmail: usernameTextfield.text!, password: passwordTextfield.text!) { (user, error) in
+                if error == nil{
+                    let usr = user!
+                    self.userUID = usr.user.uid
+                    UserDefaults.standard.set(self.userUID!, forKey: KUSERID)
+                    //go to main
+                    self.GoToApp()
+                }else{
+                    let alert = UIAlertController(title: "Error", message: "Invalid Credentials", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Re-Enter", style: .default, handler: nil)
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }else{
+            let alert = UIAlertController(title: "Alert", message: "Fill in all the fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Re-Enter", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func forgotPassTapped(_ sender: UIButton) {

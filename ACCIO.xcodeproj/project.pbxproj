@@ -20,6 +20,7 @@
 		4023D6EE2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6ED2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift */; };
 		4023D6F32236143E0004FFB1 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6F22236143E0004FFB1 /* CreateAccountViewController.swift */; };
 		4023D6F522363EE10004FFB1 /* AddCCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4023D6F422363EE10004FFB1 /* AddCCViewController.swift */; };
+		4023D6F7223652590004FFB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4023D6F6223652590004FFB1 /* GoogleService-Info.plist */; };
 		4060E5E422355E1900250DC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4060E5E322355E1900250DC6 /* SignUpViewController.swift */; };
 		40AA7E422234E3660036A0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AA7E412234E3660036A0D1 /* AppDelegate.swift */; };
 		40AA7E472234E3660036A0D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40AA7E452234E3660036A0D1 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		4023D6ED2235C0AD0004FFB1 /* MyAccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		4023D6F22236143E0004FFB1 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		4023D6F422363EE10004FFB1 /* AddCCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCCViewController.swift; sourceTree = "<group>"; };
+		4023D6F6223652590004FFB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4060E5E322355E1900250DC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		40AA7E3E2234E3660036A0D1 /* ACCIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACCIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40AA7E412234E3660036A0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				40AA7E532234E4B30036A0D1 /* Controller */,
 				40AA7E562234E4EA0036A0D1 /* Services */,
 				40AA7E482234E3670036A0D1 /* Assets.xcassets */,
+				4023D6F6223652590004FFB1 /* GoogleService-Info.plist */,
 				40AA7E4D2234E3670036A0D1 /* Info.plist */,
 			);
 			path = ACCIO;
@@ -387,6 +390,7 @@
 				40AA7E852234EDC60036A0D1 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				40AA7E7B2234EDC60036A0D1 /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				40AA7E8C2234EDC60036A0D1 /* SF-Pro-Text-Semibold.otf in Resources */,
+				4023D6F7223652590004FFB1 /* GoogleService-Info.plist in Resources */,
 				40AA7E7C2234EDC60036A0D1 /* SF-Pro-Display-Thin.otf in Resources */,
 				40AA7E7E2234EDC60036A0D1 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				40AA7E962234EDC60036A0D1 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
@@ -444,16 +448,26 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ACCIO/Pods-ACCIO-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CreditCardForm/CreditCardForm.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardForm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -9,3 +9,4 @@
 import Foundation
 
 let KUSERFLAG = "userflag"
+let KUSERID = "uid"
