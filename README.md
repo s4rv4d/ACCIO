@@ -1,6 +1,6 @@
 # ACCIO -ADG HACKGRID HACKATHON
 ## Contributors
-iOS Developement - [@SarvadShetty](https://github.com/s4rvad)
+iOS Developement - [@SarvadShetty](https://github.com/s4rvad),
 UI/UX Engineering - [@VivekPattanaik](https://github.com/vivekptnk)
 
 ## Project Details
