@@ -9,5 +9,7 @@ We build an iOS app that manages your subscription ( Spotify, iCloud, Netflix, e
 
 ### Files Present 
 XCode Files - by [@SarvadShetty](https://github.com/s4rvad)
+
 Adobe XD File (UI and Prototyping) - by [@VivekPattanaik](https://github.com/vivekptnk)
+
 PPT (For Presentation) - by both [@VivekPattanaik](https://github.com/vivekptnk) & [@SarvadShetty](https://github.com/s4rvad)
