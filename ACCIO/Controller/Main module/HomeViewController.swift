@@ -11,11 +11,10 @@ import XLPagerTabStrip
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
 
+    //MARK: - Main functions
     override func viewDidLoad() {
         self.loadDesign()
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     //MARK: - Page striper function
@@ -26,15 +25,12 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     }
     
     func loadDesign(){
-//        self.buttonBarView
         self.settings.style.buttonBarHeight = 90
         self.settings.style.selectedBarVerticalAlignment = .bottom
-//        self.settings.style.selectedBarHeight =
         self.settings.style.selectedBarHeight = 4
         self.settings.style.selectedBarBackgroundColor = UIColor.init(254, 130, 80, 1)
         self.settings.style.buttonBarBackgroundColor = UIColor.init(51, 1, 54, 1)
         self.settings.style.buttonBarItemBackgroundColor = UIColor.init(51, 1, 54, 1)
-//        self.settings.style.selectedBar
         self.settings.style.buttonBarItemFont = UIFont(name: "SFProDisplay-Bold", size: 15)!
         self.settings.style.buttonBarMinimumLineSpacing = 0
         self.settings.style.buttonBarItemTitleColor = .white
